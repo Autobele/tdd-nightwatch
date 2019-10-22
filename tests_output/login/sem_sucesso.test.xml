@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="0">
+
+  <testsuite name="login.sem_sucesso.test"
+    errors="0" failures="0" hostname="" id="" package="login" skipped="2"
+    tests="0" time="0" timestamp="">
+  
+
+  
+
+  
+    
+    <testcase
+      name="Tentativa de login com usuário em branco" classname="login.sem_sucesso.test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Tentativa de login com usuário não cadastrado" classname="login.sem_sucesso.test">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
