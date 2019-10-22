@@ -22,6 +22,6 @@ module.exports = {
         login
             .with('autobele@msn.com', '123')
             .assert.containsText('@alertDanger', 'Usuário e/ou senha inválidos')
-    },
+    },  
 
 }

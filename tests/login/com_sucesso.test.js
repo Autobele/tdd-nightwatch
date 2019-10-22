@@ -4,13 +4,11 @@ module.exports = {
         let login = browser.page.login()
         let sidebar = browser.page.sidebar()
         
-        browser.resizeWindow(1920, 1080)
-
-        login
-            .with('autobele@msn.com', '132465')
+        login.with('autobele@msn.com', '132465')
         
         sidebar
-            .assert.containsText('@userInfo', 'Autobele Silva')
+        .waitForElementVisible('@userInfo', 3000)
+        .assert.containsText('@userInfo', 'Autobele Silva')
     }
 
 }
