@@ -1,32 +1,26 @@
 module.exports = {
 
-    "Tentativa de login sem usuario": browser => {
+    "Login sem usuario": browser => {
         let login = browser.page.login()
 
-        login.navigate()
-            .waitForElementVisible('@form', 3000)
-            .click('@loginButton')
+        login
+            .with('', '')
             .assert.containsText('@alertInfo', 'Opps. Cadê o email?')
     },
 
-    "Tentativa de login sem senha": browser => {
+    "Login sem senha": browser => {
         let login = browser.page.login()
 
-        login.navigate()
-            .waitForElementVisible('@form', 3000)
-            .setValue('@emailInput', 'autobele@msn.com')
-            .click('@loginButton')
+        login
+            .with('autobele@msn.com', '')
             .assert.containsText('@alertInfo', 'Opps. Cadê a senha?')
     },
 
-    "Tentativa de login com credenciais incorretas": browser => {
+    "Login com credenciais incorretas": browser => {
         let login = browser.page.login()
 
-        login.navigate()
-            .waitForElementVisible('@form', 3000)
-            .setValue('@emailInput', 'autobele@msn.com')
-            .setValue('@passInput', '123')
-            .click('@loginButton')
+        login
+            .with('autobele@msn.com', '123')
             .assert.containsText('@alertDanger', 'Usuário e/ou senha inválidos')
     },
 

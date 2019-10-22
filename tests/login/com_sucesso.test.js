@@ -6,11 +6,8 @@ module.exports = {
         
         browser.resizeWindow(1920, 1080)
 
-        login.navigate()
-            .waitForElementVisible('@form', 3000)
-            .setValue('@emailInput', 'autobele@msn.com')
-            .setValue('@passInput', '132465')
-            .click('@loginButton')
+        login
+            .with('autobele@msn.com', '132465')
         
         sidebar
             .assert.containsText('@userInfo', 'Autobele Silva')
